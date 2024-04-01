@@ -1,9 +1,8 @@
-import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'auth1_widget.dart' show Auth1Widget;
+import 'auth2_widget.dart' show Auth2Widget;
 import 'package:flutter/material.dart';
 
-class Auth1Model extends FlutterFlowModel<Auth1Widget> {
+class Auth2Model extends FlutterFlowModel<Auth2Widget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
@@ -21,19 +20,11 @@ class Auth1Model extends FlutterFlowModel<Auth1Widget> {
   TextEditingController? passwordController;
   late bool passwordVisibility;
   String? Function(BuildContext, String?)? passwordControllerValidator;
-  // State field(s) for phone widget.
-  FocusNode? phoneFocusNode;
-  TextEditingController? phoneController;
-  String? Function(BuildContext, String?)? phoneControllerValidator;
   // State field(s) for emailAddress_Create widget.
   FocusNode? emailAddressCreateFocusNode;
   TextEditingController? emailAddressCreateController;
   String? Function(BuildContext, String?)?
       emailAddressCreateControllerValidator;
-  // State field(s) for phone_Create widget.
-  FocusNode? phoneCreateFocusNode;
-  TextEditingController? phoneCreateController;
-  String? Function(BuildContext, String?)? phoneCreateControllerValidator;
   // State field(s) for password_Create widget.
   FocusNode? passwordCreateFocusNode;
   TextEditingController? passwordCreateController;
@@ -44,8 +35,6 @@ class Auth1Model extends FlutterFlowModel<Auth1Widget> {
   TextEditingController? passwordConfirmController;
   late bool passwordConfirmVisibility;
   String? Function(BuildContext, String?)? passwordConfirmControllerValidator;
-  // Stores action output result for [Backend Call - Insert Row] action in Button widget.
-  FriendsRow? createfriend;
 
   @override
   void initState(BuildContext context) {
@@ -64,14 +53,8 @@ class Auth1Model extends FlutterFlowModel<Auth1Widget> {
     passwordFocusNode?.dispose();
     passwordController?.dispose();
 
-    phoneFocusNode?.dispose();
-    phoneController?.dispose();
-
     emailAddressCreateFocusNode?.dispose();
     emailAddressCreateController?.dispose();
-
-    phoneCreateFocusNode?.dispose();
-    phoneCreateController?.dispose();
 
     passwordCreateFocusNode?.dispose();
     passwordCreateController?.dispose();

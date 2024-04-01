@@ -1,27 +1,25 @@
 import '/auth/supabase_auth/auth_util.dart';
-import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/custom_code/actions/index.dart' as actions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'auth1_model.dart';
-export 'auth1_model.dart';
+import 'auth2_model.dart';
+export 'auth2_model.dart';
 
-class Auth1Widget extends StatefulWidget {
-  const Auth1Widget({super.key});
+class Auth2Widget extends StatefulWidget {
+  const Auth2Widget({super.key});
 
   @override
-  State<Auth1Widget> createState() => _Auth1WidgetState();
+  State<Auth2Widget> createState() => _Auth2WidgetState();
 }
 
-class _Auth1WidgetState extends State<Auth1Widget>
+class _Auth2WidgetState extends State<Auth2Widget>
     with TickerProviderStateMixin {
-  late Auth1Model _model;
+  late Auth2Model _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -83,7 +81,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => Auth1Model());
+    _model = createModel(context, () => Auth2Model());
 
     _model.tabBarController = TabController(
       vsync: this,
@@ -96,14 +94,8 @@ class _Auth1WidgetState extends State<Auth1Widget>
     _model.passwordController ??= TextEditingController();
     _model.passwordFocusNode ??= FocusNode();
 
-    _model.phoneController ??= TextEditingController();
-    _model.phoneFocusNode ??= FocusNode();
-
     _model.emailAddressCreateController ??= TextEditingController();
     _model.emailAddressCreateFocusNode ??= FocusNode();
-
-    _model.phoneCreateController ??= TextEditingController();
-    _model.phoneCreateFocusNode ??= FocusNode();
 
     _model.passwordCreateController ??= TextEditingController();
     _model.passwordCreateFocusNode ??= FocusNode();
@@ -603,111 +595,6 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                   ),
                                                 ),
                                               ),
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 0.0, 0.0, 16.0),
-                                                child: SizedBox(
-                                                  width: double.infinity,
-                                                  child: TextFormField(
-                                                    controller:
-                                                        _model.phoneController,
-                                                    focusNode:
-                                                        _model.phoneFocusNode,
-                                                    autofocus: false,
-                                                    autofillHints: const [
-                                                      AutofillHints.password
-                                                    ],
-                                                    obscureText: false,
-                                                    decoration: InputDecoration(
-                                                      labelText: 'phone number',
-                                                      labelStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Plus Jakarta Sans',
-                                                                color: const Color(
-                                                                    0xFF101213),
-                                                                fontSize: 14.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w500,
-                                                              ),
-                                                      enabledBorder:
-                                                          OutlineInputBorder(
-                                                        borderSide: const BorderSide(
-                                                          color:
-                                                              Color(0xFFE0E3E7),
-                                                          width: 2.0,
-                                                        ),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(40.0),
-                                                      ),
-                                                      focusedBorder:
-                                                          OutlineInputBorder(
-                                                        borderSide: const BorderSide(
-                                                          color:
-                                                              Color(0xFF4B39EF),
-                                                          width: 2.0,
-                                                        ),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(40.0),
-                                                      ),
-                                                      errorBorder:
-                                                          OutlineInputBorder(
-                                                        borderSide: const BorderSide(
-                                                          color:
-                                                              Color(0xFFFF5963),
-                                                          width: 2.0,
-                                                        ),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(40.0),
-                                                      ),
-                                                      focusedErrorBorder:
-                                                          OutlineInputBorder(
-                                                        borderSide: const BorderSide(
-                                                          color:
-                                                              Color(0xFFFF5963),
-                                                          width: 2.0,
-                                                        ),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(40.0),
-                                                      ),
-                                                      filled: true,
-                                                      fillColor: Colors.white,
-                                                      contentPadding:
-                                                          const EdgeInsets.all(24.0),
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Plus Jakarta Sans',
-                                                          color:
-                                                              const Color(0xFF101213),
-                                                          fontSize: 14.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                        ),
-                                                    minLines: null,
-                                                    cursorColor:
-                                                        const Color(0xFF4B39EF),
-                                                    validator: _model
-                                                        .phoneControllerValidator
-                                                        .asValidator(context),
-                                                  ),
-                                                ),
-                                              ),
                                               Align(
                                                 alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
@@ -763,84 +650,6 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                       borderRadius:
                                                           BorderRadius.circular(
                                                               12.0),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                              Align(
-                                                alignment: const AlignmentDirectional(
-                                                    0.0, 0.0),
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 0.0, 16.0),
-                                                  child: FFButtonWidget(
-                                                    onPressed: () async {
-                                                      GoRouter.of(context)
-                                                          .prepareAuthEvent();
-
-                                                      final user =
-                                                          await authManager
-                                                              .signInWithEmail(
-                                                        context,
-                                                        _model.phoneController
-                                                            .text,
-                                                        _model
-                                                            .passwordController
-                                                            .text,
-                                                      );
-                                                      if (user == null) {
-                                                        return;
-                                                      }
-
-                                                      context.goNamedAuth(
-                                                          'List03UserSelect',
-                                                          context.mounted);
-                                                    },
-                                                    text: 'Sign In',
-                                                    options: FFButtonOptions(
-                                                      width: 230.0,
-                                                      height: 52.0,
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      iconPadding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      color: const Color(0xFF4B39EF),
-                                                      textStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .titleSmall
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Plus Jakarta Sans',
-                                                                color: Colors
-                                                                    .white,
-                                                                fontSize: 16.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w500,
-                                                              ),
-                                                      elevation: 3.0,
-                                                      borderSide: const BorderSide(
-                                                        color:
-                                                            Colors.transparent,
-                                                        width: 1.0,
-                                                      ),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              40.0),
                                                     ),
                                                   ),
                                                 ),
@@ -988,7 +797,95 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                                 borderSide:
                                                                     const BorderSide(
                                                                   color: Color(
-                                                                      0xFFF1F4F8),
+                                                                      0xFFE0E3E7),
+                                                                  width: 2.0,
+                                                                ),
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            40.0),
+                                                                hoverColor: const Color(
+                                                                    0xFFF1F4F8),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        0.0,
+                                                                        0.0,
+                                                                        0.0,
+                                                                        16.0),
+                                                            child:
+                                                                FFButtonWidget(
+                                                              onPressed:
+                                                                  () async {
+                                                                GoRouter.of(
+                                                                        context)
+                                                                    .prepareAuthEvent();
+                                                                final user =
+                                                                    await authManager
+                                                                        .signInWithGoogle(
+                                                                            context);
+                                                                if (user ==
+                                                                    null) {
+                                                                  return;
+                                                                }
+
+                                                                context.goNamedAuth(
+                                                                    'List03UserSelect',
+                                                                    context
+                                                                        .mounted);
+                                                              },
+                                                              text:
+                                                                  'Continue with Apple',
+                                                              icon: const FaIcon(
+                                                                FontAwesomeIcons
+                                                                    .apple,
+                                                                size: 20.0,
+                                                              ),
+                                                              options:
+                                                                  FFButtonOptions(
+                                                                width: 230.0,
+                                                                height: 44.0,
+                                                                padding:
+                                                                    const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                iconPadding:
+                                                                    const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                color: Colors
+                                                                    .white,
+                                                                textStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Plus Jakarta Sans',
+                                                                      color: const Color(
+                                                                          0xFF101213),
+                                                                      fontSize:
+                                                                          14.0,
+                                                                      letterSpacing:
+                                                                          0.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .bold,
+                                                                    ),
+                                                                elevation: 0.0,
+                                                                borderSide:
+                                                                    const BorderSide(
+                                                                  color: Color(
+                                                                      0xFFE0E3E7),
                                                                   width: 2.0,
                                                                 ),
                                                                 borderRadius:
@@ -1147,113 +1044,6 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                         const Color(0xFF4B39EF),
                                                     validator: _model
                                                         .emailAddressCreateControllerValidator
-                                                        .asValidator(context),
-                                                  ),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 0.0, 0.0, 16.0),
-                                                child: SizedBox(
-                                                  width: double.infinity,
-                                                  child: TextFormField(
-                                                    controller: _model
-                                                        .phoneCreateController,
-                                                    focusNode: _model
-                                                        .phoneCreateFocusNode,
-                                                    autofocus: true,
-                                                    autofillHints: const [
-                                                      AutofillHints.email
-                                                    ],
-                                                    obscureText: false,
-                                                    decoration: InputDecoration(
-                                                      labelText: 'Phone Number',
-                                                      labelStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .labelMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Plus Jakarta Sans',
-                                                                color: const Color(
-                                                                    0xFF57636C),
-                                                                fontSize: 14.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w500,
-                                                              ),
-                                                      enabledBorder:
-                                                          OutlineInputBorder(
-                                                        borderSide: const BorderSide(
-                                                          color:
-                                                              Color(0xFFE0E3E7),
-                                                          width: 2.0,
-                                                        ),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(40.0),
-                                                      ),
-                                                      focusedBorder:
-                                                          OutlineInputBorder(
-                                                        borderSide: const BorderSide(
-                                                          color:
-                                                              Color(0xFF4B39EF),
-                                                          width: 2.0,
-                                                        ),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(40.0),
-                                                      ),
-                                                      errorBorder:
-                                                          OutlineInputBorder(
-                                                        borderSide: const BorderSide(
-                                                          color:
-                                                              Color(0xFFFF5963),
-                                                          width: 2.0,
-                                                        ),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(40.0),
-                                                      ),
-                                                      focusedErrorBorder:
-                                                          OutlineInputBorder(
-                                                        borderSide: const BorderSide(
-                                                          color:
-                                                              Color(0xFFFF5963),
-                                                          width: 2.0,
-                                                        ),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(40.0),
-                                                      ),
-                                                      filled: true,
-                                                      fillColor: Colors.white,
-                                                      contentPadding:
-                                                          const EdgeInsets.all(24.0),
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Plus Jakarta Sans',
-                                                          color:
-                                                              const Color(0xFF101213),
-                                                          fontSize: 14.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                        ),
-                                                    minLines: null,
-                                                    keyboardType: TextInputType
-                                                        .emailAddress,
-                                                    cursorColor:
-                                                        const Color(0xFF4B39EF),
-                                                    validator: _model
-                                                        .phoneCreateControllerValidator
                                                         .asValidator(context),
                                                   ),
                                                 ),
@@ -1555,36 +1345,9 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                         return;
                                                       }
 
-                                                      await actions
-                                                          .updateUserPhone(
-                                                        _model
-                                                            .phoneCreateController
-                                                            .text,
-                                                      );
-                                                      _model.createfriend =
-                                                          await FriendsTable()
-                                                              .insert({
-                                                        'first_name':
-                                                            currentUserEmail,
-                                                        'last_name':
-                                                            currentUserUid,
-                                                      });
-
-                                                      context.pushNamedAuth(
-                                                        'VerifyOTP',
-                                                        context.mounted,
-                                                        queryParameters: {
-                                                          'phoneNumber':
-                                                              serializeParam(
-                                                            _model
-                                                                .phoneCreateController
-                                                                .text,
-                                                            ParamType.String,
-                                                          ),
-                                                        }.withoutNulls,
-                                                      );
-
-                                                      setState(() {});
+                                                      context.goNamedAuth(
+                                                          'List03UserSelect',
+                                                          context.mounted);
                                                     },
                                                     text: 'Create Account',
                                                     options: FFButtonOptions(
@@ -1735,6 +1498,94 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                               icon: const FaIcon(
                                                                 FontAwesomeIcons
                                                                     .google,
+                                                                size: 20.0,
+                                                              ),
+                                                              options:
+                                                                  FFButtonOptions(
+                                                                width: 230.0,
+                                                                height: 44.0,
+                                                                padding:
+                                                                    const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                iconPadding:
+                                                                    const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                color: Colors
+                                                                    .white,
+                                                                textStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Plus Jakarta Sans',
+                                                                      color: const Color(
+                                                                          0xFF101213),
+                                                                      fontSize:
+                                                                          14.0,
+                                                                      letterSpacing:
+                                                                          0.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .bold,
+                                                                    ),
+                                                                elevation: 0.0,
+                                                                borderSide:
+                                                                    const BorderSide(
+                                                                  color: Color(
+                                                                      0xFFF1F4F8),
+                                                                  width: 2.0,
+                                                                ),
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            40.0),
+                                                                hoverColor: const Color(
+                                                                    0xFFF1F4F8),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        0.0,
+                                                                        0.0,
+                                                                        0.0,
+                                                                        16.0),
+                                                            child:
+                                                                FFButtonWidget(
+                                                              onPressed:
+                                                                  () async {
+                                                                GoRouter.of(
+                                                                        context)
+                                                                    .prepareAuthEvent();
+                                                                final user =
+                                                                    await authManager
+                                                                        .signInWithGoogle(
+                                                                            context);
+                                                                if (user ==
+                                                                    null) {
+                                                                  return;
+                                                                }
+
+                                                                context.goNamedAuth(
+                                                                    'List03UserSelect',
+                                                                    context
+                                                                        .mounted);
+                                                              },
+                                                              text:
+                                                                  'Continue with Apple',
+                                                              icon: const FaIcon(
+                                                                FontAwesomeIcons
+                                                                    .apple,
                                                                 size: 20.0,
                                                               ),
                                                               options:

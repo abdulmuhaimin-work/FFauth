@@ -1,3 +1,4 @@
+import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -52,12 +53,18 @@ class _List03UserSelectWidgetState extends State<List03UserSelectWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Invite Friends',
-                style: FlutterFlowTheme.of(context).headlineSmall,
+                currentUserEmail,
+                style: FlutterFlowTheme.of(context).headlineSmall.override(
+                      fontFamily: 'Outfit',
+                      letterSpacing: 0.0,
+                    ),
               ),
               Text(
                 'Invite your friends to join you!',
-                style: FlutterFlowTheme.of(context).labelMedium,
+                style: FlutterFlowTheme.of(context).labelMedium.override(
+                      fontFamily: 'Readex Pro',
+                      letterSpacing: 0.0,
+                    ),
               ),
             ],
           ),
@@ -116,7 +123,12 @@ class _List03UserSelectWidgetState extends State<List03UserSelectWidget> {
                               16.0, 12.0, 0.0, 0.0),
                           child: Text(
                             'Invite Friends',
-                            style: FlutterFlowTheme.of(context).labelMedium,
+                            style: FlutterFlowTheme.of(context)
+                                .labelMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  letterSpacing: 0.0,
+                                ),
                           ),
                         ),
                       ),
@@ -125,7 +137,11 @@ class _List03UserSelectWidgetState extends State<List03UserSelectWidget> {
                             16.0, 12.0, 0.0, 0.0),
                         child: Text(
                           '#',
-                          style: FlutterFlowTheme.of(context).bodyMedium,
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                  ),
                         ),
                       ),
                       Padding(
@@ -133,7 +149,11 @@ class _List03UserSelectWidgetState extends State<List03UserSelectWidget> {
                             const EdgeInsetsDirectional.fromSTEB(2.0, 12.0, 0.0, 0.0),
                         child: Text(
                           'Selected',
-                          style: FlutterFlowTheme.of(context).bodyMedium,
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                  ),
                         ),
                       ),
                     ],
@@ -235,6 +255,7 @@ class _List03UserSelectWidgetState extends State<List03UserSelectWidget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Readex Pro',
+                                                letterSpacing: 0.0,
                                                 lineHeight: 2.0,
                                               ),
                                         ),
@@ -247,6 +268,7 @@ class _List03UserSelectWidgetState extends State<List03UserSelectWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondary,
+                                                letterSpacing: 0.0,
                                               ),
                                         ),
                                         tileColor: FlutterFlowTheme.of(context)
@@ -311,6 +333,7 @@ class _List03UserSelectWidgetState extends State<List03UserSelectWidget> {
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Readex Pro',
                           color: Colors.white,
+                          letterSpacing: 0.0,
                         ),
                     elevation: 2.0,
                     borderSide: const BorderSide(

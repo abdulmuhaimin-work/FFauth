@@ -115,6 +115,7 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                       fontFamily: 'Outfit',
                       color: const Color(0xFF15161E),
                       fontSize: 24.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                     ),
               ),
@@ -124,6 +125,7 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                       fontFamily: 'Outfit',
                       color: const Color(0xFF606A85),
                       fontSize: 14.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w500,
                     ),
               ),
@@ -195,6 +197,7 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                             fontFamily: 'Outfit',
                                             color: const Color(0xFF606A85),
                                             fontSize: 24.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
                                           ),
                                       hintStyle: FlutterFlowTheme.of(context)
@@ -203,6 +206,7 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                             fontFamily: 'Outfit',
                                             color: const Color(0xFF606A85),
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
                                           ),
                                       errorStyle: FlutterFlowTheme.of(context)
@@ -211,6 +215,7 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                             fontFamily: 'Figtree',
                                             color: const Color(0xFFFF5963),
                                             fontSize: 12.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -257,8 +262,10 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                           fontFamily: 'Outfit',
                                           color: const Color(0xFF15161E),
                                           fontSize: 24.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
                                         ),
+                                    minLines: null,
                                     cursorColor: const Color(0xFF6F61EF),
                                     validator: _model.taskController1Validator
                                         .asValidator(context),
@@ -278,6 +285,7 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                             fontFamily: 'Outfit',
                                             color: const Color(0xFF606A85),
                                             fontSize: 24.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
                                           ),
                                       hintStyle: FlutterFlowTheme.of(context)
@@ -286,6 +294,7 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                             fontFamily: 'Outfit',
                                             color: const Color(0xFF606A85),
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
                                           ),
                                       errorStyle: FlutterFlowTheme.of(context)
@@ -294,6 +303,7 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                             fontFamily: 'Figtree',
                                             color: const Color(0xFFFF5963),
                                             fontSize: 12.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -340,8 +350,10 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                           fontFamily: 'Outfit',
                                           color: const Color(0xFF15161E),
                                           fontSize: 24.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
                                         ),
+                                    minLines: null,
                                     cursorColor: const Color(0xFF6F61EF),
                                     validator: _model.taskController2Validator
                                         .asValidator(context),
@@ -354,6 +366,7 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                           fontFamily: 'Outfit',
                                           color: const Color(0xFF606A85),
                                           fontSize: 14.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
                                         ),
                                   ),
@@ -373,6 +386,7 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                             fontFamily: 'Figtree',
                                             color: const Color(0xFF15161E),
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                           ),
                                       iconColor: const Color(0xFF15161E),
@@ -390,6 +404,7 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                             fontFamily: 'Figtree',
                                             color: const Color(0xFF606A85),
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                           ),
                                       iconColor: const Color(0xFF606A85),
@@ -426,10 +441,15 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                             fontFamily: 'Outfit',
                                             color: const Color(0xFF606A85),
                                             fontSize: 24.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
                                           ),
                                       hintStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            letterSpacing: 0.0,
+                                          ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
                                           color: FlutterFlowTheme.of(context)
@@ -468,7 +488,12 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                       ),
                                     ),
                                     style: FlutterFlowTheme.of(context)
-                                        .headlineMedium,
+                                        .headlineMedium
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          letterSpacing: 0.0,
+                                        ),
+                                    minLines: null,
                                     keyboardType: TextInputType.number,
                                     validator: _model.taskController3Validator
                                         .asValidator(context),
@@ -485,6 +510,7 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                           fontFamily: 'Outfit',
                                           color: const Color(0xFF606A85),
                                           fontSize: 14.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
                                         ),
                                   ),
@@ -559,6 +585,7 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                           .override(
                                             fontFamily: 'Readex Pro',
                                             color: Colors.white,
+                                            letterSpacing: 0.0,
                                           ),
                                       elevation: 3.0,
                                       borderSide: const BorderSide(
@@ -622,6 +649,7 @@ class _CreateEmployeeWidgetState extends State<CreateEmployeeWidget> {
                                   fontFamily: 'Figtree',
                                   color: Colors.white,
                                   fontSize: 16.0,
+                                  letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
                                 ),
                         elevation: 3.0,

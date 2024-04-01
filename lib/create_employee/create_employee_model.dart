@@ -36,8 +36,6 @@ class CreateEmployeeModel extends FlutterFlowModel<CreateEmployeeWidget> {
       FFUploadedFile(bytes: Uint8List.fromList([]));
   String uploadedFileUrl2 = '';
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -53,8 +51,4 @@ class CreateEmployeeModel extends FlutterFlowModel<CreateEmployeeWidget> {
     taskFocusNode3?.dispose();
     taskController3?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
@@ -101,6 +102,30 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Auth1',
           path: '/login',
           builder: (context, params) => const Auth1Widget(),
+        ),
+        FFRoute(
+          name: 'VerifyOTP',
+          path: '/verifyOTP',
+          builder: (context, params) => VerifyOTPWidget(
+            phoneNumber: params.getParam(
+              'phoneNumber',
+              ParamType.String,
+            ),
+            signIn: params.getParam(
+              'signIn',
+              ParamType.bool,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'AuthPhone',
+          path: '/loginPhone',
+          builder: (context, params) => const AuthPhoneWidget(),
+        ),
+        FFRoute(
+          name: 'Auth2',
+          path: '/auth2',
+          builder: (context, params) => const Auth2Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

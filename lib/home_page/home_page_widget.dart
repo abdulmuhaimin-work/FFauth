@@ -1,3 +1,4 @@
+import '/auth/supabase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -50,6 +51,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   fontFamily: 'Outfit',
                   color: Colors.white,
                   fontSize: 22.0,
+                  letterSpacing: 0.0,
                 ),
           ),
           actions: const [],
@@ -82,6 +84,36 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   children: [
                     FFButtonWidget(
                       onPressed: () async {
+                        GoRouter.of(context).prepareAuthEvent();
+                        await authManager.signOut();
+                        GoRouter.of(context).clearRedirectLocation();
+
+                        context.goNamedAuth('Auth1', context.mounted);
+                      },
+                      text: 'sign out',
+                      options: FFButtonOptions(
+                        height: 40.0,
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            24.0, 0.0, 24.0, 0.0),
+                        iconPadding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: FlutterFlowTheme.of(context).primary,
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleSmall.override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Colors.white,
+                                  letterSpacing: 0.0,
+                                ),
+                        elevation: 3.0,
+                        borderSide: const BorderSide(
+                          color: Colors.transparent,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                    FFButtonWidget(
+                      onPressed: () async {
                         context.pushNamed('Auth1');
                       },
                       text: 'Sign in',
@@ -96,6 +128,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Readex Pro',
                                   color: Colors.white,
+                                  letterSpacing: 0.0,
                                 ),
                         elevation: 3.0,
                         borderSide: const BorderSide(
@@ -118,7 +151,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         iconPadding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
-                        textStyle: FlutterFlowTheme.of(context).titleMedium,
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleMedium.override(
+                                  fontFamily: 'Readex Pro',
+                                  letterSpacing: 0.0,
+                                ),
                         elevation: 3.0,
                         borderSide: const BorderSide(
                           color: Colors.transparent,
@@ -140,7 +177,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         iconPadding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
-                        textStyle: FlutterFlowTheme.of(context).titleMedium,
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleMedium.override(
+                                  fontFamily: 'Readex Pro',
+                                  letterSpacing: 0.0,
+                                ),
                         elevation: 3.0,
                         borderSide: const BorderSide(
                           color: Colors.transparent,
@@ -162,7 +203,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         iconPadding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
-                        textStyle: FlutterFlowTheme.of(context).titleMedium,
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleMedium.override(
+                                  fontFamily: 'Readex Pro',
+                                  letterSpacing: 0.0,
+                                ),
                         elevation: 3.0,
                         borderSide: const BorderSide(
                           color: Colors.transparent,

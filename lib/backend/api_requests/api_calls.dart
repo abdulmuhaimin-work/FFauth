@@ -66,16 +66,50 @@ class OtpLoginCall {
   }
 }
 
-class VerifyOtpCall {
-  static Future<ApiCallResponse> call() async {
-    const ffApiRequestBody = '''
+class VerifyOtpPhoneChangeCall {
+  static Future<ApiCallResponse> call({
+    String? otp = '',
+    String? phone = '',
+  }) async {
+    final ffApiRequestBody = '''
 {
-  "type": "sms",
-  "phone": "+60135932043",
-  "token": "752979"
+  "type": "phone_change",
+  "phone": "$phone",
+  "token": "$otp"
 }''';
     return ApiManager.instance.makeApiCall(
-      callName: 'verify otp',
+      callName: 'verify otp phone change',
+      apiUrl: 'https://sssjkqrsthcpwrvwbdgt.supabase.co/auth/v1/verify',
+      callType: ApiCallType.POST,
+      headers: {
+        'apikey':
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNzc2prcXJzdGhjcHdydndiZGd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3NDU5NjcsImV4cCI6MjAyNjMyMTk2N30.4qRLacJeRLpI5PYA-114WwKiL-8__ti-i-31-3896To',
+      },
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class VerifyOtpPhoneChangeCopyCall {
+  static Future<ApiCallResponse> call({
+    String? otp = '',
+    String? phone = '',
+  }) async {
+    final ffApiRequestBody = '''
+{
+  "type": "sms",
+  "phone": "$phone",
+  "token": "$otp"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'verify otp phone change Copy',
       apiUrl: 'https://sssjkqrsthcpwrvwbdgt.supabase.co/auth/v1/verify',
       callType: ApiCallType.POST,
       headers: {

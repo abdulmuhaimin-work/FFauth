@@ -52,8 +52,6 @@ class List03UserSelectModel extends FlutterFlowModel<List03UserSelectWidget> {
           .map((e) => e.key)
           .toList();
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -61,8 +59,4 @@ class List03UserSelectModel extends FlutterFlowModel<List03UserSelectWidget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }
